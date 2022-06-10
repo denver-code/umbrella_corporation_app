@@ -9,18 +9,34 @@ class BigButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
-      onPressed: onPressed,
-      style: OutlinedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0.0),
-        ),
-        side: const BorderSide(width: 1.0, color: Colors.white),
+    return SizedBox(
+      height: 64,
+      width: 311,
+      child: TextButton(
+        style: ButtonStyle(
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(0.0),
+              side: const BorderSide(width: 1.0, color: Colors.white),
+            )),
+            backgroundColor:
+                MaterialStateProperty.all<Color>(Colors.transparent)),
+        onPressed: onPressed,
+        child: Text(text,
+            style: const TextStyle(color: Colors.white, fontSize: 20)),
       ),
-      child: Padding(
-          padding: const EdgeInsets.all(25.0),
-          child: Text(text,
-              style: const TextStyle(color: Colors.white, fontSize: 20))),
     );
+    // OutlinedButton(
+    //   onPressed: onPressed,
+    //   style: OutlinedButton.styleFrom(
+    //     shape: RoundedRectangleBorder(
+    //       borderRadius: BorderRadius.circular(0.0),
+    //     ),
+    //     side: const BorderSide(width: 1.0, color: Colors.white),
+    //   ),
+    //   child: Padding(
+    //       padding: const EdgeInsets.all(25.0),
+    //       child: Text(text,
+    //           style: const TextStyle(color: Colors.white, fontSize: 20))),
+    // );
   }
 }
