@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:umbrella_corporation_app/screens/cover_screen.dart';
+import 'package:umbrella_corporation_app/screens/quick_menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'EurostileExtended',
       ),
       home: const CoverScreen(),
+      routes: {"/quickMenu": (_) => const QuickMenu()},
     );
   }
 }

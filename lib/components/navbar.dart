@@ -30,7 +30,7 @@ Widget Navbar(BuildContext context) {
           GestureDetector(
             onTap: () {
               // Navigator.pop(context);
-              print("OPEN MENU!");
+              Navigator.pushNamed(context, "/quickMenu");
             },
             child: Image(
               fit: BoxFit.cover,
